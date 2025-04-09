@@ -26,6 +26,9 @@ int main()
 
 	int a, b, c;
 	a = b = c = 50;
+
+	const int myConstVariable = 10;
+	//myConstVariable = 15; // This will throw an Error
 	return 0;
 }
 
