@@ -6,8 +6,18 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
-    return 0;
+	for (int i = 0; i < 10; i++) {
+		cout << "Hello World!\n";
+		cout << "I am learning C++!\n";
+		cout << "Have a good day!\n";
+		cout << "i = ";
+		cout << i;
+		cout << "\ni * 5 = ";
+		cout << 5 * i;
+		cout << "\n\n";
+	}
+
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
