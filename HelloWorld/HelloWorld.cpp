@@ -10,11 +10,8 @@ int main()
 		cout << "Hello World!\n";
 		cout << "I am learning C++!\n";
 		cout << "Have a good day!\n";
-		cout << "i = ";
-		cout << i;
-		cout << "\ni * 5 = ";
-		cout << 5 * i;
-		cout << "\n\n";
+		cout << "i = " << i << endl << "i * 5 = " << 5 * i;
+		cout << "\n" << endl;
 	}
 
 	return 0;
