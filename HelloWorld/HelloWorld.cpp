@@ -18,6 +18,14 @@ int main()
 		cout << "\n" << endl;
 	}
 
+
+	int x = 1, y = 2, z = 3;
+
+	int sum = x + y + z;
+	cout << sum;
+
+	int a, b, c;
+	a = b = c = 50;
 	return 0;
 }
 
