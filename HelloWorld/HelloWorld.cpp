@@ -6,7 +6,11 @@ using namespace std;
 
 int main()
 {
-	for (int i = 0; i < 10; i++) {
+	int n;
+	n = 5;
+	n = 10;
+
+	for (int i = 0; i < n; i++) {
 		cout << "Hello World!\n";
 		cout << "I am learning C++!\n";
 		cout << "Have a good day!\n";
