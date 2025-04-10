@@ -1,7 +1,16 @@
 // TypesAndVariables.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+//#define C // Uncoment to use C || comment to use C++
+
+#ifdef C
+extern "C" {
+#include <stdio.h>
+}
+#else{
 #include <iostream>
+#endif
+
 using namespace std;
 
 namespace mine {
