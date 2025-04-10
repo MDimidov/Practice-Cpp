@@ -45,6 +45,21 @@ int main()
 		break;
 	}
 
+	cout << "----Here we start with for loop" << endl;
+	for (int i = 0; i < 10; i++) {
+		if (i % 2 == 0) {
+			cout << i << endl;
+		}
+	}
+	cout << "----Here we start with While loop" << endl;
+	int i = 10;
+	while (i < 20) {
+		if (i % 2 == 0) {
+			cout << i << endl;
+		}
+		i++;
+	}
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
