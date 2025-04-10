@@ -30,7 +30,7 @@ T powerUpGeneric(T number) {
 }
 
 template< typename T, typename R>
-auto multiply(T num1, R num2) -> decltype(num1*num2)
+auto multiply(T num1, R num2) -> decltype(num1* num2)
 {
 	return num1 * num2;
 }
@@ -61,8 +61,13 @@ int main()
 		}() << endl;
 
 	cout << "This is Auto Generic function" << endl;
-	int result = multiply<int, double>(5, 3.14);
-	cout << result;
+	double result = multiply<int, double>(5, 2.54);
+	cout << result << endl;
+	cout << multiply<int, double>(5, 3.14) << endl;
+
+	string test = "Message test";
+
+	cout << test;
 
 }
 
