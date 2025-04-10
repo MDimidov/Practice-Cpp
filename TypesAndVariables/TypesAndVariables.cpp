@@ -5,20 +5,46 @@
 using namespace std;
 
 namespace mine {
-    unsigned int uint = 100;
+	unsigned int uint = 100;
 }
 
 int main()
 {
-    cout << "Hello World!\n";
-    int num = 5;
-    bool isTrue = 0;
-    double dNum = 12.23123124123;
-    float fNum = 21.12312312312f; // To define float number you must add 'f' to the end of the number
-    char symbol = '#';
-    unsigned int uint = -1; // Unsigned int will overflow - can not be negative
+	cout << "Hello World!\n";
+	int num = 5;
+	bool isTrue = 0;
+	double dNum = 12.23123124123;
+	float fNum = 21.12312312312f; // To define float number you must add 'f' to the end of the number
+	char symbol = '#';
+	unsigned int uint = -1; // Unsigned int will overflow - can not be negative
 
-    cout << uint << " - " << mine::uint << endl; // Here we can use different namespaces for variables with the same name
+	cout << uint << " - " << mine::uint << endl; // Here we can use different namespaces for variables with the same name
+
+	if (num == 32) // If you use '=' instead of '==' you will receave always 'true' and thats not correct
+	{
+		cout << "a is qual to 32" << endl;
+	}
+
+	int result = num != 32 ? 10 : -10;
+
+	cout << result << endl << endl;
+
+	switch (result)
+	{
+
+	case 10: {
+		cout << "Your result is positive" << endl;
+	}
+		   break;
+	case -10: {
+
+		cout << "Your result is negative" << endl;
+	}
+			break;
+	default:
+		break;
+	}
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
