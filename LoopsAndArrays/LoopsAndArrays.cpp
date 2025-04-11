@@ -62,9 +62,9 @@ int main()
 		{"B", "C"}
 	};
 
-	for (int i = 0; i < sizeof(multiArr[0]) / sizeof(multiArr[0][0]); i++) 
+	for (int i = 0; i < sizeof(multiArr[0]) / sizeof(multiArr[0][0]); i++)
 	{
-		for (int j = 0; j < sizeof(multiArr[1]) / sizeof(multiArr[1][0]); j++) 
+		for (int j = 0; j < sizeof(multiArr[1]) / sizeof(multiArr[1][0]); j++)
 		{
 			cout << multiArr[i][j] << " ";
 		}
