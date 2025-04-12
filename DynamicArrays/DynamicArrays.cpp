@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <vector>
 #define Base 1024
 #define _1KB(type) new type [Base / sizeof(type)]
 #define _1MB(type) new type [Base * Base / sizeof(type)]
@@ -29,7 +30,16 @@ int main()
 		delete[] numbers;	// If you put delete in array you prevent memory leak
 	}
 	//delete[] numbers;	// If you put delete out of array you get memory leak
-	cout << "";
+	cout << endl;
+
+	vector<int> ints{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	for (int i = 0; i < 100000; i++) {
+		for (int i = 0; i < ints.size(); i++) {
+			cout << ints[i] << " ";
+		}
+		cout << endl;
+	}
+
 
 }
 
