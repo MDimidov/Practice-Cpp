@@ -61,9 +61,12 @@ int main()
 	string* ptr = &meal;
 	cout << &meal << endl;
 	cout << ptr << endl;
+	cout << &ptr << endl;
 
 	// Dereference
 	cout << *ptr << endl;
+
+
 
 }
 

@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <array>
 using namespace std;
 
 int main()
@@ -70,6 +71,13 @@ int main()
 		}
 	}
 
+	cout << endl;
+
+	// C++ Arrays
+	array<int, 3> row = { {1, 2 ,3} };
+	for (int i = 0; i < 3; i++) {
+		cout << row[i];
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
