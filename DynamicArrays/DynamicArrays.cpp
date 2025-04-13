@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #define Base 1024
 #define _1KB(type) new type [Base / sizeof(type)]
 #define _1MB(type) new type [Base * Base / sizeof(type)]
@@ -25,19 +26,50 @@ int main()
 
 	int* numbers = nullptr;
 
-	for (int i = 0; i < 1000; i++) {
+	for (int i = 0; i < 10; i++) {
 		numbers = _1MB(int);
-		delete[] numbers;	// If you put delete in array you prevent memory leak
+		delete[] numbers;	// if you put delete in array you prevent memory leak
 	}
-	//delete[] numbers;	// If you put delete out of array you get memory leak
+	//delete[] numbers;	// if you put delete out of array you get memory leak
 	cout << endl;
 
 	vector<int> ints{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-	for (int i = 0; i < 100000; i++) {
-		for (int i = 0; i < ints.size(); i++) {
-			cout << ints[i] << " ";
+	fill(ints.begin(), ints.end(), 0);	// Fill vectors with values
+	ints.push_back(8);
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < ints.size(); j++) {
+			cout << ints[j] << " ";
 		}
 		cout << endl;
+	}
+
+	// Matrix
+	vector<vector<int>> matrix;
+	int rows = 6;
+	int cols = 6;
+
+	while (true)
+	{
+
+		for (int i = 0; i < rows; i++) // Initialize matrix with values
+		{
+			matrix.emplace_back(vector<int>());
+			for (int j = 0; j < cols; j++)
+			{
+				matrix.at(i).push_back(i);
+			}
+		}
+
+		for (int i = 0; i < matrix.size(); i++) // Print Matrix
+		{
+			for (int j = 0; j < matrix.at(i).size(); j++)
+			{
+				cout << matrix.at(i).at(j) << " ";
+			}
+			cout << endl;
+		}
+
+		matrix.clear(); // Prevent memory leak
 	}
 
 
