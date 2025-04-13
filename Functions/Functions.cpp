@@ -38,6 +38,9 @@ auto multiply(T num1, R num2) -> decltype(num1* num2)
 // Create function
 void myFunction();	// declaration
 void printCountry(string country = "Italy");
+void printNames(string firstName, string lastName, int age);
+int sumNumbers(int a, int b);
+void swapNumbers(int& a, int& b);
 
 int main()
 {
@@ -56,7 +59,7 @@ int main()
 	cout << powerAuto(5) << endl;
 
 	int a = 6;
-	// Lmbda functiouns
+	// Lambda functions
 	cout << "This is Lambda function" << endl;
 	cout << [a]()
 		{
@@ -80,6 +83,22 @@ int main()
 
 	// Parameters and Arguments
 	printCountry("Spain");
+	printCountry();
+
+	printNames("Pesho", "Ivanov", 18);
+
+	cout << "Sum is " << sumNumbers(2, 5) << endl;
+
+	// Reference - Swap number
+	int x = 10;
+	int y = 20;
+
+	cout << "Before swap: x = " << x << "; y = " << y << endl;
+	
+	swapNumbers(x, y);
+
+	cout << "After swap: x = " << x << "; y = " << y << endl;
+
 }
 
 void myFunction()	// declaration 
@@ -87,9 +106,28 @@ void myFunction()	// declaration
 	cout << "My function" << endl;	// definition
 }
 
-void printCountry(string country) 
+void printCountry(string country)
 {
 	cout << country << endl;
+}
+
+void printNames(string firstName, string lastName, int age)
+{
+	cout << "Name: " << firstName << " " << lastName << endl;
+	cout << "Age: " << age << endl;
+}
+
+
+int sumNumbers(int a, int b)
+{
+	return a + b;
+}
+
+void swapNumbers(int& a, int& b) 
+{
+	a += b;
+	b = a - b;
+	a -= b;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
