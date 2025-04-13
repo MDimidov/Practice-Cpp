@@ -35,6 +35,9 @@ auto multiply(T num1, R num2) -> decltype(num1* num2)
 	return num1 * num2;
 }
 
+// Create function
+void myFunction();	// declaration
+void printCountry(string country = "Italy");
 
 int main()
 {
@@ -68,7 +71,25 @@ int main()
 	string test = "Message test";
 
 	cout << test;
+	cout << endl;
 
+
+	// Call myFunction
+	myFunction();
+
+
+	// Parameters and Arguments
+	printCountry("Spain");
+}
+
+void myFunction()	// declaration 
+{
+	cout << "My function" << endl;	// definition
+}
+
+void printCountry(string country) 
+{
+	cout << country << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
