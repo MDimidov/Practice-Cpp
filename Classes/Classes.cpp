@@ -50,6 +50,22 @@ public:
     }
 };
 
+// Encapsulation
+class Employee {
+private:
+    int salary;
+public:
+    // Setter
+    void setSalary(int s) {
+        salary = s;
+    }
+
+    // Getter
+    int getSalary() {
+        return salary;
+    }
+};
+
 int main()
 {
     // Test class and objects
@@ -81,8 +97,14 @@ int main()
 
     Car bently("Bently", "model", 2024);
     bently.printCar();
-}
 
+
+    // Encapsulation
+    Employee pesho;
+    pesho.setSalary(15000);
+    cout << "Salary: " << pesho.getSalary() << endl << endl;
+
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
