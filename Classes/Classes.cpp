@@ -66,6 +66,46 @@ public:
     }
 };
 
+// Inheritance
+class Vehicle {
+public:
+    string brand;
+    string model;
+    int year = 0;
+
+    void honk() {
+        cout << "Tuut, Tuuut!" << endl;
+    }
+};
+
+class Truck : public Vehicle {
+public:
+    Truck(string br, string md, int yr) {
+        brand = br;
+        model = md;
+        year = yr;
+    }
+
+    Truck() {};
+
+    void print() {
+        cout << "Truck brand: " << brand << endl;
+        cout << "Truck model: " << model << endl;
+        cout << "Truck year: " << year << endl << endl;
+    }
+};
+
+
+// Multilevel Inheritance
+class Buss : public Truck {
+public:
+    Buss(string br, string md, int yr) {
+        model = md;
+        brand = br;
+        year = yr;
+    }
+};
+
 int main()
 {
     // Test class and objects
@@ -103,6 +143,14 @@ int main()
     Employee pesho;
     pesho.setSalary(15000);
     cout << "Salary: " << pesho.getSalary() << endl << endl;
+
+    // Inheritance
+    Truck man("MAN", "38", 2023);
+    man.print();
+
+    // Multilevel Inheritance
+    Buss bus("Merceds Bendz", "model", 2023);
+    bus.print();
 
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
