@@ -4,6 +4,7 @@
 #include <iostream>
 #include<vector>
 #include<list>
+#include<stack>
 using namespace std;
 
 int main()
@@ -44,11 +45,11 @@ int main()
 		}
 
 		cout << endl;
-		cout << "------Lists-------" << endl;
 	}
 
 	// Lists
 	{
+		cout << "------Lists-------" << endl;
 		list<string> cars = { "Bentley", "Bugatti", "Porsche" };
 
 		cout << "First car: " << cars.front() << endl;
@@ -76,6 +77,37 @@ int main()
 			cout << cars.size() << " cars at the list!" << endl;
 		}
 
+		cout << endl;
+	}
+
+	// Stacks
+	{
+		cout << "------Stacks-------" << endl;
+
+		stack<string> cars;
+
+		// Add elements to the stack
+		cars.push("Lamborghini");
+		cars.push("Bentley");
+		cars.push("Porsche");
+		cars.push("Tesla");
+		cars.push("Maserati");
+		cars.push("Bugatti");
+
+		cout << cars.top() << endl;
+
+		cars.top() = "Ferrari";
+		cout << cars.top() << endl;
+
+		cars.pop();
+		cout << cars.top() << endl;
+
+		cout << "Stack size: " << cars.size() << endl;
+
+		while (!cars.empty()) {
+			cout << cars.top() << endl;
+			cars.pop();
+		}
 	}
 }
 
