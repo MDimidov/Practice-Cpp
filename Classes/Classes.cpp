@@ -264,12 +264,12 @@ int main()
 	cout << buffer << endl << endl;
 
 
-	struct tm datetime2;
-	datetime2.tm_year = 2025 - 1900;
-	datetime2.tm_mon = 4 - 1;
-	datetime2.tm_mday = 15;
-	datetime2.tm_hour = 14; datetime2.tm_min = 15; datetime2.tm_sec = 13;
-	datetime2.tm_isdst = -1;
+	//struct tm datetime;
+	datetime.tm_year = 2025 - 1900;
+	datetime.tm_mon = 4 - 1;
+	datetime.tm_mday = 15;
+	datetime.tm_hour = 14; datetime.tm_min = 15; datetime.tm_sec = 13;
+	datetime.tm_isdst = -1;
 
 	string weekdays[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 
