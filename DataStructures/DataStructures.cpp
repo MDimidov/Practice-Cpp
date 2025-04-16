@@ -8,6 +8,7 @@
 #include<queue>
 #include<deque>
 #include<set>
+#include<map>
 using namespace std;
 
 int main()
@@ -194,7 +195,7 @@ int main()
 	{
 		cout << "------Sets-------" << endl;
 
-		set<string> cars = { "Bentley", "Bugatti", "Porsche", "Ferrari", "BMW", "BMW"};	// Sets sort data automaticaly in ascending order
+		set<string> cars = { "Bentley", "Bugatti", "Porsche", "Ferrari", "BMW", "BMW" };	// Sets sort data automaticaly in ascending order
 
 		for (string car : cars) {
 			cout << "Car brand: " << car << endl;
@@ -237,6 +238,48 @@ int main()
 			cout << cars.size() << " cars in the list" << endl;
 		}
 
+		cout << endl;
+	}
+
+	// Maps - Dictionary (Associative array)
+	{
+		cout << "------Maps-------" << endl;
+
+		map<string, string> cars = { {"Bentley", "Luxury"}, {"Bugatti", "Luxury"}, {"Porsche", "Standard"}, {"Ferrari", "Luxury"}, {"BMW", "Standard"}, {"BMW", "Cheap"} };	// Maps sort data automaticaly in ascending order by keys
+
+		cout << "Bentley is: " << cars["Bentley"] << endl;
+		cout << "BMW is: " << cars.at("BMW") << endl;
+
+		cars.at("Bentley") = "Favorites";
+		cout << "Bentley is: " << cars.at("Bentley") << endl;
+
+		// Add element to map
+		cars["Tesla"] = "Electric";
+		cout << "Tesla is: " << cars.at("Tesla") << endl;
+
+		cars.insert({ "Lamborghini", "Luxury, Favorite" });
+		cout << "Lamborghini is: " << cars.at("Lamborghini") << endl;
+
+		// Delete element from map
+		cars.erase("Tesla");
+		//cout << "Tesla is: " << cars.at("Tesla") << endl;	// This will throw an error
+
+		cout << "Size of the map is: " << cars.size() << endl;
+
+
+		if (cars.count("Porsche")) {
+			cout << "Porsche is available and " << cars.at("Porsche") << endl;
+		}
+		else {
+			cout << "Porsche is not in the map list" << endl;
+		}
+
+		for (auto car : cars) {
+			cout << car.first << " is " << car.second << endl;
+		}
+
+		cars.clear();
+		cout << "Size of the map after clear() is: " << cars.size() << endl;
 	}
 }
 
