@@ -280,6 +280,47 @@ int main()
 
 		cars.clear();
 		cout << "Size of the map after clear() is: " << cars.size() << endl;
+		cout << endl;
+	}
+
+	// Iterators
+	{
+		cout << "------Iterators-------" << endl;
+		vector<string> cars = { "Porsche", "Lamborghini", "Ferrari", "Bentley" };
+		vector<string> people = { "John", "Andy", "Anna", "Lora" };
+
+		{
+
+			vector<string>::iterator it;
+
+			for (it = cars.begin() + 1; it != cars.end(); ++it) {
+				cout << *it << endl;
+			}
+
+			it = cars.begin();
+			*it = "Tesla";
+			cout << cars.at(0) << endl;
+		}
+
+		{
+			auto it = cars.begin();
+			for (it = cars.begin(); it != cars.end();) {
+				if (*it == "Tesla") {
+					*it = "Porsche";
+				}
+				else {
+					++it;
+				}
+			}
+
+			// Iterate in reverse order
+			for (auto it = cars.rbegin(); it != cars.rend(); ++it) {
+				cout << *it << endl;
+			}
+		}
+
+
+
 	}
 }
 
