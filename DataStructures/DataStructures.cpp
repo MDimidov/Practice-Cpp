@@ -5,6 +5,7 @@
 #include<vector>
 #include<list>
 #include<stack>
+#include<queue>
 using namespace std;
 
 int main()
@@ -108,6 +109,43 @@ int main()
 			cout << cars.top() << endl;
 			cars.pop();
 		}
+
+		cout << endl;
+	}
+
+	// Queues
+	{
+		cout << "------Queues-------" << endl;
+		queue<string> cars;
+
+		// Add elements to the queue
+		cars.push("Lamborghini");
+		cars.push("Bentley");
+		cars.push("Porsche");
+		cars.push("Tesla");
+		cars.push("Maserati");
+		cars.push("Bugatti");
+
+		cout << "First element: " << cars.front() << endl;
+		cout << "Last element: " << cars.back() << endl;
+
+		cars.front() = "Lambo";
+		cars.back() = "I woke up in my new Bugatti";
+
+		cout << "First element: " << cars.front() << endl;
+		cout << "Last element: " << cars.back() << endl;
+
+		cars.pop();
+		cout << "First element: " << cars.front() << endl;
+
+		cout << "Queue size: " << cars.size() << endl;
+
+		while (!cars.empty()) {
+			cout << "Car brand: " << cars.front() << endl;
+			cars.pop();
+		}
+
+		cout << endl;
 	}
 }
 
