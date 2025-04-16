@@ -6,6 +6,7 @@
 #include<list>
 #include<stack>
 #include<queue>
+#include<deque>
 using namespace std;
 
 int main()
@@ -146,6 +147,46 @@ int main()
 		}
 
 		cout << endl;
+	}
+
+	// Deque
+	{
+		cout << "------Dequeues-------" << endl;
+
+		deque<string> cars = { "Bentley", "Bugatti", "Porsche" };
+
+		cout << "cars[2]: " << cars[2] << endl;
+
+		cout << "First element: " << cars.front() << endl;
+		cout << "Last element: " << cars.back() << endl;
+
+		cout << "First element: " << cars.at(0) << endl;
+		cout << "Last element: " << cars.at(cars.size() - 1) << endl;
+
+		cars.at(1) = "Lamborghini";
+		cout << "at(1) element: " << cars.at(1) << endl;
+
+		cars.push_front("Tesla");
+		cars.push_back("Ferrari");
+
+		for (string car : cars) {
+			cout << " Car brand: " << car << endl;
+		}
+
+		cout << "Size of the deque: " << cars.size() << endl;
+
+		cars.pop_front();
+		cars.pop_back();
+
+		cout << "First element: " << cars.front() << endl;
+		cout << "Last element: " << cars.back() << endl;
+
+		while (!cars.empty()) {
+			cout << " Car brand: " << cars.front() << endl;
+			cars.pop_front();
+		}
+
+
 	}
 }
 
