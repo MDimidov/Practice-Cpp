@@ -7,6 +7,7 @@
 #include<stack>
 #include<queue>
 #include<deque>
+#include<set>
 using namespace std;
 
 int main()
@@ -186,6 +187,55 @@ int main()
 			cars.pop_front();
 		}
 
+		cout << endl;
+	}
+
+	// Sets
+	{
+		cout << "------Sets-------" << endl;
+
+		set<string> cars = { "Bentley", "Bugatti", "Porsche", "Ferrari", "BMW", "BMW"};	// Sets sort data automaticaly in ascending order
+
+		for (string car : cars) {
+			cout << "Car brand: " << car << endl;
+		}
+
+		// Sort in ascendnig order
+		{
+			set<int> nums = { 6, 2,3,1,9,7,8,4,5 };
+
+			for (int num : nums) {
+				cout << num << " ";
+			}
+			cout << endl;
+		}
+
+		// Sort in descending order
+		{
+			set<int, greater<int>> nums = { 6,2,3,1,9,7,8,4,5 };
+			for (int num : nums) {
+				cout << num << " ";
+			}
+			cout << endl;
+		}
+
+		cars.insert("Rouse Royse");	// Add element to set
+		cars.erase("BMW");
+		for (string car : cars) {
+			cout << car << endl;
+		}
+
+		cout << "Size of the set: " << cars.size() << endl;
+
+		cars.clear();
+		cout << "Size of the set after clear(): " << cars.size() << endl;
+
+		if (cars.empty()) {
+			cout << "No cars in the list" << endl;
+		}
+		else {
+			cout << cars.size() << " cars in the list" << endl;
+		}
 
 	}
 }
