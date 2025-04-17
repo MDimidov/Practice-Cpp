@@ -9,6 +9,7 @@
 #include<deque>
 #include<set>
 #include<map>
+#include<algorithm>
 using namespace std;
 
 int main()
@@ -317,11 +318,62 @@ int main()
 			for (auto it = cars.rbegin(); it != cars.rend(); ++it) {
 				cout << *it << endl;
 			}
+
+			vector<int> numbers = { 5,2,3,1,7,6,9,8,4 };
+			//sort(numbers.begin(), numbers.end());	// Order in ascending order
+			sort(numbers.rbegin(), numbers.rend());	// Order in descending order
+
+			for (auto num : numbers) {
+				cout << num << " ";
+			}
+			cout << endl;
 		}
-
-
-
 	}
+
+	// Algorithms
+	{
+		cout << "------Iterators-------" << endl;
+
+		vector<int> numbers = { 5,2,3,1,7,6,9,8,4 };
+		sort(numbers.begin() + 3, numbers.end() - 2);
+
+		for (auto num : numbers) {
+			cout << num << " ";
+		}
+		cout << endl;
+
+		auto it = find(numbers.begin(), numbers.end(), 4);
+		cout << *it << endl;
+
+		sort(numbers.begin(), numbers.end());
+		it = upper_bound(numbers.begin(), numbers.end(), 4);
+		cout << *it << endl;
+
+		auto its = min_element(numbers.rbegin(), numbers.rend());
+		cout << "array min_element(): " << *its << endl;
+
+		its = max_element(numbers.rbegin(), numbers.rend());
+		cout << "array max_element(): " << *its << endl;
+
+
+		// Coppy vector
+		vector<int> copiedNums(9);
+
+		copy(numbers.begin(), numbers.end(), copiedNums.begin());
+
+		for (auto num : copiedNums) {
+			cout << num << " ";
+		}
+		cout << endl;
+
+		// Fill elements
+		fill(copiedNums.begin(), copiedNums.end(), 6);
+
+		for (auto num : copiedNums) {
+			cout << num << " ";
+		}
+	}
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
