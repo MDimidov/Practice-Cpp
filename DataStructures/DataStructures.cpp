@@ -10,6 +10,7 @@
 #include<set>
 #include<map>
 #include<algorithm>
+#include<cstdlib>
 using namespace std;
 
 int main()
@@ -372,8 +373,18 @@ int main()
 		for (auto num : copiedNums) {
 			cout << num << " ";
 		}
+		cout << endl;
 	}
 
+	// Random
+	{
+		cout << "------Random-------" << endl;
+		srand(time(0));
+		
+		int rnum = rand() % 101;
+		cout << rand()<< " " << rnum << endl;
+
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
