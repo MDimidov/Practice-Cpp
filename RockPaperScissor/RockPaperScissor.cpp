@@ -18,12 +18,19 @@ void printLine() {
 	cout << "----------------------------------------" << endl;
 }
 
+void clearScreen() {
+	system("cls");
+}
+
 int main()
 {
 	srand(time(0));
 	int randNum = -1;
 	char key;
-	
+
+	int playerWins = 0;
+	int computerWins = 0;
+
 	Game playerChoose;
 	Game computerChoose;
 
@@ -35,11 +42,16 @@ int main()
 
 		//cout << key << endl;
 
+		cout.clear();
+
 		if ((int)key == 27) {
 			printLine();
 			cout << "Good game. See you next time!" << endl;
 			printLine();
 			break;
+		}
+		else {
+			clearScreen();
 		}
 
 		switch (key)
@@ -77,14 +89,22 @@ int main()
 		}
 		else if ((playerChoose == Rock && computerChoose == Scissors) ||
 			(playerChoose == Paper && computerChoose == Rock) ||
-			(playerChoose == Scissors && computerChoose == Paper)) 
+			(playerChoose == Scissors && computerChoose == Paper))
 		{
 			cout << "The winner is You my friend. Congratulations!" << endl;
+			playerWins++;
 		}
 		else
 		{
 			cout << "You Loose, Computer wins!" << endl;
+			computerWins++;
 		}
+
+		printLine();
+
+		cout << "Current result: " << endl;
+		cout << "Player wins: " << playerWins << endl;
+		cout << "Computer wins: " << computerWins << endl;
 
 		printLine();
 		cout << endl;
