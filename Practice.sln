@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicТacТoe", "TicТacТoe\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RockPaperScissor", "RockPaperScissor\RockPaperScissor.vcxproj", "{CEE65A83-14E4-48E5-AA22-953238D551A8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polymorphism", "Polymorphism\Polymorphism.vcxproj", "{454A36A4-E051-4EAE-9EB7-767AE7A43524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{CEE65A83-14E4-48E5-AA22-953238D551A8}.Release|x64.Build.0 = Release|x64
 		{CEE65A83-14E4-48E5-AA22-953238D551A8}.Release|x86.ActiveCfg = Release|Win32
 		{CEE65A83-14E4-48E5-AA22-953238D551A8}.Release|x86.Build.0 = Release|Win32
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Debug|x64.ActiveCfg = Debug|x64
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Debug|x64.Build.0 = Debug|x64
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Debug|x86.ActiveCfg = Debug|Win32
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Debug|x86.Build.0 = Debug|Win32
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Release|x64.ActiveCfg = Release|x64
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Release|x64.Build.0 = Release|x64
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Release|x86.ActiveCfg = Release|Win32
+		{454A36A4-E051-4EAE-9EB7-767AE7A43524}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
