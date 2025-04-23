@@ -26,7 +26,7 @@ public:
 		cout << "Box" << endl;
 	}
 
-	void print()
+	virtual void print()
 	{
 		cout << "Box high: " << high << endl;
 		cout << "Box length: " << length << endl;
@@ -42,13 +42,14 @@ class SuperBox : public Box
 {
 public:
 	SuperBox() {}
-	void print()
+	void print() override
 	{
 		cout << "SuperBox high: " << high << endl;
 		cout << "SuperBox length: " << length << endl;
 	}
 
-	void printTest() override {
+	void printTest() override 
+	{
 		cout << "SuperBox" << endl;
 	}
 
