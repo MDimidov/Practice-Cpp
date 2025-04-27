@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polymorphism", "Polymorphis
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AbstractClassAndInterface", "AbstractClassAndInterface\AbstractClassAndInterface.vcxproj", "{D5EEE714-949D-45D7-9C30-6A0BAE8650AD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InterviewTasks", "InterviewTasks\InterviewTasks.vcxproj", "{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,6 +153,14 @@ Global
 		{D5EEE714-949D-45D7-9C30-6A0BAE8650AD}.Release|x64.Build.0 = Release|x64
 		{D5EEE714-949D-45D7-9C30-6A0BAE8650AD}.Release|x86.ActiveCfg = Release|Win32
 		{D5EEE714-949D-45D7-9C30-6A0BAE8650AD}.Release|x86.Build.0 = Release|Win32
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Debug|x64.ActiveCfg = Debug|x64
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Debug|x64.Build.0 = Debug|x64
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Debug|x86.ActiveCfg = Debug|Win32
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Debug|x86.Build.0 = Debug|Win32
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Release|x64.ActiveCfg = Release|x64
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Release|x64.Build.0 = Release|x64
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Release|x86.ActiveCfg = Release|Win32
+		{3A23E341-62D2-4970-9A6A-CDDD88B75F4A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
