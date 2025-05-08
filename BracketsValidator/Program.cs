@@ -7,29 +7,29 @@ bool IsBracketsValid(char[] chars)
 {
     Dictionary<char, char> openClosedBrackets = new()
     {
-        {'(', ')' },
-        {'{', '}' },
-        {'[', ']' },
-        {'<', '>' },
+        {')', '(' },
+        {'}', '{' },
+        {']', '[' },
+        {'>', '<' },
     };
 
     Stack<char> brackets = new();
-    for (int i = chars.Length - 1; i >= 0; i--)
+    foreach (char c in chars)
     {
-        if (openClosedBrackets.ContainsKey(chars[i]))
+        if (openClosedBrackets.ContainsKey(c))
         {
-            if (brackets.Any() && brackets.Peek() == openClosedBrackets[chars[i]])
+            if (brackets.Any() && brackets.Peek() == openClosedBrackets[c])
             {
                 brackets.Pop();
             }
             else
             {
-                brackets.Push(chars[i]);
+                brackets.Push(c);
             }
         }
         else
         {
-            brackets.Push(chars[i]);
+            brackets.Push(c);
         }
     }
 
