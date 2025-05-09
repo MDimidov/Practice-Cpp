@@ -6,12 +6,19 @@
 
     public Showtime(DateTime startTime, int capacity)
     {
-        // TODO: инициализирай
+        StartTime = startTime;
+        Capacity = capacity;
     }
 
     public bool BookSeats(int numberOfSeats)
     {
-        // TODO: върни true ако има място и увеличи BookedSeats
+        if (numberOfSeats + BookedSeats <= Capacity)
+        {
+            BookedSeats += numberOfSeats;
+            return true;
+        }
+
+        Console.WriteLine("Няма достатъчно места!");
         return false;
     }
 

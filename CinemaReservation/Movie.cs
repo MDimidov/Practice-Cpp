@@ -6,11 +6,13 @@
 
     public Movie(string title, int durationMinutes)
     {
-        // TODO: инициализирай
+        Title = title;
+        DurationMinutes = durationMinutes;
+        Showtimes = new List<Showtime>();
     }
 
     public void AddShowtime(Showtime showtime)
     {
-        // TODO: добави прожекция
+        Showtimes.Add(showtime);
     }
 }
