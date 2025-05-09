@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BracketsValidator", "Bracke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MostFrequentWord", "MostFrequentWord\MostFrequentWord.csproj", "{C8FE01E0-E74D-4A66-9CC9-F91C7FB85843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaReservation", "CinemaReservation\CinemaReservation.csproj", "{6843E705-5965-4D20-914A-2715113319C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,18 @@ Global
 		{C8FE01E0-E74D-4A66-9CC9-F91C7FB85843}.Release|x64.Build.0 = Release|Any CPU
 		{C8FE01E0-E74D-4A66-9CC9-F91C7FB85843}.Release|x86.ActiveCfg = Release|Any CPU
 		{C8FE01E0-E74D-4A66-9CC9-F91C7FB85843}.Release|x86.Build.0 = Release|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Debug|x64.Build.0 = Debug|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Debug|x86.Build.0 = Debug|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Release|x64.ActiveCfg = Release|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Release|x64.Build.0 = Release|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Release|x86.ActiveCfg = Release|Any CPU
+		{6843E705-5965-4D20-914A-2715113319C6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

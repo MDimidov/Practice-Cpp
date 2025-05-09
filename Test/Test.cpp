@@ -23,13 +23,36 @@
 //}
 
 
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//int main() {
+//    string s = "hello";
+//    s += '!';
+//    cout << s.length() << endl;
+//    return 0;
+//}
+
+
 #include <iostream>
-#include <string>
-using namespace std;
+
+class Test {
+public:
+    Test() { std::cout << "Constructor\n"; }
+    ~Test() { std::cout << "Destructor\n"; }
+};
+
+void func() {
+    Test t;
+    throw std::runtime_error("error");
+}
 
 int main() {
-    string s = "hello";
-    s += '!';
-    cout << s.length() << endl;
-    return 0;
+    try {
+        func();
+    }
+    catch (...) {
+        std::cout << "Caught\n";
+    }
 }
